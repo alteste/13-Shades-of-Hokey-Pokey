@@ -3,7 +3,7 @@
 <head>
     
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>50 Shades of Hokey Pokey</title>
+    <title>13 Shades of Hokey Pokey</title>
     <script src="script.js"></script>
     <script src="jquery-3.3.1.min.js"></script>
     
@@ -22,9 +22,14 @@
         }
         
         .top-stripe {
-            width: 100%;
-            height: 80px;
+            margin: auto;
             background-color: #ffffff;
+            width: 808px;
+        }
+        
+        .logo {
+            width: 169px;
+            padding: 24px 0;
         }
         
         .input-stripe-container {
@@ -35,7 +40,7 @@
         
         .input-stripe {
             margin: auto;
-            padding: 50px 0 24px;
+            padding: 48px 0 24px;
             width: 808px;
         }
         
@@ -43,7 +48,7 @@
             font-size: 48px;
             color: #ffffff;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 56px;
         }
         
@@ -63,7 +68,7 @@
             font-size: 16px;
             color: #ffffff;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
-            font-weight: bold;
+            font-weight: 700;
         }
         
         .text-selectors {
@@ -80,7 +85,8 @@
             padding: 14px 16px 14px 16px;
             border: none;
             border-radius: 3px;
-            background: url(http://www.stackoverflow.com/favicon.ico) 90% / 15% no-repeat #ffffff;
+            background: url('Images/Macron.svg') no-repeat #ffffff;
+            background-position: right 16px center;
             font-size: 16px;
             color: #44413d;
         }
@@ -116,7 +122,7 @@
             border-radius: 3px;
             font-size: 16px;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
-            font-weight: bold;
+            font-weight: 500;
             color: #ffffff;
             box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), inset 0 -3px 0px rgba(0, 0, 0, 0.3); 
         }
@@ -161,7 +167,7 @@
             color: #44413d;
             font-size: 48px;
             line-height: 80px;
-            font-weight: bold;
+            font-weight: 700;
             text-align: center;
             display: inline-block;
             vertical-align:top;
@@ -178,7 +184,7 @@
         .large-sample {
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
             font-size: 30px;
-            font-weight: bold;
+            font-weight: 700;
             color: inherit;
         }
         
@@ -186,13 +192,13 @@
             margin-top: 24px;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
             font-size: 14px;
-            font-weight: regular;
+            font-weight: 400;
             color: inherit;
         }
         
         @media only screen and (max-width: 840px) {
             
-            .input-stripe-container, .output-stripe-container {
+            .top-stripe, .input-stripe-container, .output-stripe-container {
                 width: 100%;
                 padding: 0 16px;
             }
@@ -255,7 +261,11 @@
         
     </style>
     
-    <div class="top-stripe"></div>
+    <div class="top-stripe">
+        <a href="https://trademe.nz/" target="_blank">
+            <img class="logo" src="Images/Logo.png" alt="Trade Me">
+        </a>
+    </div>
     
     <div class="input-stripe-container">
         <div class="input-stripe">
