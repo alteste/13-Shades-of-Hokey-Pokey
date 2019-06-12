@@ -3,7 +3,7 @@
 <head>
     
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>13 Shades of Hokey Pokey</title>
+    <title>14 Shades of Hokey Pokey</title>
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
@@ -232,27 +232,58 @@
         
         .large-sample {
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
-            font-size: 30px;
+            font-size: 32px;
+            line-height: 40px;
             font-weight: 700;
             color: inherit;
         }
         
         .normal-sample {
-            margin-top: 24px;
+            margin-top: 16px;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
             font-size: 14px;
+            line-height: 24px;
             font-weight: 400;
             color: inherit;
         }
         
+        .info-stripe-container {
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        
+        .info-stripe {
+            padding-top: 40px;
+            padding-bottom: 48px;
+            margin: auto;
+            width: 808px;
+        }
+
+        .info-heading {
+            font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 400;
+            color: #76716D;
+        }
+
+        .info-text {
+        	  margin-top: 16px;
+            font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #65605D;
+        }
+        
         @media only screen and (max-width: 840px) {
             
-            .top-stripe, .input-stripe-container, .output-stripe-container {
+            .top-stripe, .input-stripe-container, .output-stripe-container, .info-stripe-container {
                 width: 100%;
                 padding: 0 16px;
             }
             
-            .input-stripe, .output-stripe {
+            .input-stripe, .output-stripe, .info-stripe {
                 width: 100%;
             }
             
@@ -440,10 +471,17 @@
                 </div>
             </div>
             <div class="sample-text" id="ls">
-                <div class="large-sample"><p>This is some text to test this baby out.</p></div>
-                <div class="normal-sample"><p>This is some text to test this baby out.</p></div>
+                <div class="large-sample"><p>Lorem ipsum dolor sit amet, consectetur.</p></div>
+                <div class="normal-sample"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
             </div>
         </div>
+    </div>
+
+    <div class="info-stripe-container">
+	    <div class="info-stripe">
+	    	<p class="info-heading">How it works</p>
+	    	<p class="info-text">WCAG 2 level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text.<br/><br/>Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.</p>
+	    </div>
     </div>
         
     <script>
