@@ -3,9 +3,9 @@
 <head>
     
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>13 Shades of Hokey Pokey</title>
+    <title>14 Shades of Hokey Pokey</title>
     <script src="script.js"></script>
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
 </head>
 
@@ -125,6 +125,7 @@
             font-weight: 500;
             color: #ffffff;
             box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25), inset 0 -3px 0px rgba(0, 0, 0, 0.3); 
+            transition-duration: 0.1s;
         }
         
         button:hover, select:hover {
@@ -157,20 +158,68 @@
             width: 808px;
         }
         
-        .contrast-ratio {
+        #contrast-ratio-container {
             width: 288px;
             height: 80px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
             background-color: #ffffff;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
+            display: inline-block;
+            vertical-align:top;
+            transition: 0.2s ease-out;
+        }
+        
+        #contrast-ratio-container.hide {
+            height: 232px;
+        }
+        
+        #contrast-ratio-container:hover {
+            cursor: pointer;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contrast-ratio {
             color: #44413d;
             font-size: 48px;
             line-height: 80px;
             font-weight: 700;
             text-align: center;
-            display: inline-block;
-            vertical-align:top;
+            vertical-align: top;
+        }
+        
+        .rule {
+            height: 1px;
+            margin: 8px auto 16px auto;
+            width: 67%;
+            background-color: #D7D5D2;
+        }
+        
+        .contrast-check {
+            text-align: left;
+            margin-left: 24px;
+            margin-top: 8px;
+            height: 48px;
+            line-height: 40px;
+        }
+        
+        .contrast-check img {
+            font-size: 0;
+            line-height: 0;
+            vertical-align: middle;
+        }
+        
+        .check-text {
+            color: #65605D;
+            margin-left: 16px;
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 400;
+            vertical-align: middle;
+        }
+        
+        #checks {
+            display: none;
         }
         
         .sample-text {
@@ -183,27 +232,58 @@
         
         .large-sample {
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
-            font-size: 30px;
+            font-size: 32px;
+            line-height: 40px;
             font-weight: 700;
             color: inherit;
         }
         
         .normal-sample {
-            margin-top: 24px;
+            margin-top: 16px;
             font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
             font-size: 14px;
+            line-height: 24px;
             font-weight: 400;
             color: inherit;
         }
         
+        .info-stripe-container {
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        
+        .info-stripe {
+            padding-top: 40px;
+            padding-bottom: 48px;
+            margin: auto;
+            width: 808px;
+        }
+
+        .info-heading {
+            font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 32px;
+            font-weight: 400;
+            color: #76716D;
+        }
+
+        .info-text {
+        	  margin-top: 16px;
+            font-family: 'Story Sans', 'Helvetica Neue', helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #65605D;
+        }
+        
         @media only screen and (max-width: 840px) {
             
-            .top-stripe, .input-stripe-container, .output-stripe-container {
+            .top-stripe, .input-stripe-container, .output-stripe-container, .info-stripe-container {
                 width: 100%;
                 padding: 0 16px;
             }
             
-            .input-stripe, .output-stripe {
+            .input-stripe, .output-stripe, .info-stripe {
                 width: 100%;
             }
             
@@ -248,7 +328,7 @@
                 margin: 24px 0 0 0;
             }
             
-            .contrast-ratio {
+            #contrast-ratio-container {
                 width: 100%;
             }
             
@@ -263,7 +343,7 @@
     
     <div class="top-stripe">
         <a href="https://trademe.nz/" target="_blank">
-            <img class="logo" src="Images/Logo.png" alt="Trade Me">
+            <img class="logo" src="Images/Logo.png" alt="Trade Me logo">
         </a>
     </div>
     
@@ -376,12 +456,32 @@
     
     <div class="output-stripe-container" id="osc">
         <div class="output-stripe">
-            <div class="contrast-ratio"><span id="cr">1.51</span> : 1</div>
+            <div id="contrast-ratio-container">
+                <div class="contrast-ratio"><span id="cr">1.51</span> : 1</div>
+                <div id="checks">
+                    <div class="rule"></div>
+                    <div class="contrast-check">
+                        <img src="Images/emo-sad.svg" alt="Smiley face" id="check-large">
+                        <span class="check-text">Large text</span>
+                    </div>
+                    <div class="contrast-check">
+                        <img src="Images/emo-sad.svg" alt="Smiley face" id="check-normal">
+                        <span class="check-text">Normal text</span>
+                    </div>
+                </div>
+            </div>
             <div class="sample-text" id="ls">
-                <div class="large-sample"><p>This is some text to test this baby out.</p></div>
-                <div class="normal-sample"><p>This is some text to test this baby out.</p></div>
+                <div class="large-sample"><p>Lorem ipsum dolor sit amet, consectetur.</p></div>
+                <div class="normal-sample"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
             </div>
         </div>
+    </div>
+
+    <div class="info-stripe-container">
+	    <div class="info-stripe">
+	    	<p class="info-heading">How it works</p>
+	    	<p class="info-text">WCAG 2 level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Level AAA requires a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text.<br/><br/>Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.</p>
+	    </div>
     </div>
         
     <script>
@@ -520,6 +620,21 @@
             cc = round(cc, 2);
             
             document.getElementById("cr").innerHTML = cc;
+            
+            
+            if (cc >= 3) {
+                $("#check-large").attr("src", "Images/emo-smile.svg");
+            } 
+            else {
+                $("#check-large").attr("src", "Images/emo-sad.svg");
+            }
+            
+            if (cc >= 4.5) {
+                $("#check-normal").attr("src", "Images/emo-smile.svg");
+            } 
+            else {
+                $("#check-normal").attr("src", "Images/emo-sad.svg");
+            }
         }
         
         function luminanace(r, g, b) {
@@ -549,6 +664,19 @@
             
             setColour();
         }
+        
+        $(document).ready(function(){
+            $("#contrast-ratio-container").click(function(){
+              if($(this).hasClass('hide')) {
+                $(this).delay(200).animate({height:80},200).removeClass('hide');
+                $("#checks").fadeOut(200);
+                  
+              } else { 
+                $(this).animate({height:232},200).addClass('hide');
+                $("#checks").delay(300).fadeIn(200);
+              }
+            });
+          });
         
     </script>    
     
