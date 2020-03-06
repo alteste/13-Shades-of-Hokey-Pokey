@@ -102,7 +102,7 @@ select {
 }
 
 @media (min-width:960px) {
-    .select { margin-bottom:0; width:calc(100%*5/12); }
+    .select { margin-bottom:0; width:calc(((100% + 24px) * 3.5/12) - 24px); }
 }
     
 .colour-select { width:calc(60% - 12px); }
@@ -111,7 +111,7 @@ select {
 .bg { margin-left: 0; }
 
 @media (min-width:768px) {
-    .bg { margin-left:24px; }
+    .bg { margin-left:20px; }
 }
 
 .button { display:inline-block; width:100%; }
@@ -134,8 +134,7 @@ button {
 }
 
 @media only screen and (min-width: 960px) {
-    .button { width:inherit; }
-    button { margin-left:24px; }
+    .button { width:calc(((100% + 24px) * 2/12) - 24px); margin-left:24px; }
 }
 
 select:focus { outline:2px solid #ccc; }
@@ -242,5 +241,5 @@ button:active {
 .info-stripe { padding-top:32px; padding-bottom:80px; }
 
 @media (min-width:1024px) {
-    .text-container { width:calc(100%*7/12); }
+    .text-container { width:calc(100%*9/12); }
 }
