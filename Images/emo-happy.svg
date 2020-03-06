@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icons/24emo-happy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20,0 C8.954,0 0,8.954 0,20 C0,31.046 8.954,40 20,40 C31.046,40 40,31.046 40,20 C40,14.6956702 37.8928632,9.60859195 34.1421356,5.85786438 C30.3914081,2.10713681 25.3043298,0 20,0 Z M20,36 C11.163444,36 4,28.836556 4,20 C4,11.163444 11.163444,4 20,4 C28.836556,4 36,11.163444 36,20 C35.9900802,28.8324438 28.8324438,35.9900802 20,36 L20,36 Z M20,32 C25.5228475,32 30,27.5228475 30,22 L10,22 C10,27.5228475 14.4771525,32 20,32 L20,32 Z M15,20 C16.6568542,20 18,18.6568542 18,17 C18,15.3431458 16.6568542,14 15,14 C13.3431458,14 12,15.3431458 12,17 C12,18.6568542 13.3431458,20 15,20 Z M25,20 C26.6568542,20 28,18.6568542 28,17 C28,15.3431458 26.6568542,14 25,14 C23.3431458,14 22,15.3431458 22,17 C22,18.6568542 23.3431458,20 25,20 Z" id="path-1"></path>
+    </defs>
+    <g id="Playground" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Output-Stripe-Copy-7" transform="translate(-138.000000, -133.000000)">
+            <g id="Contrast-ratio" transform="translate(114.000000, 32.000000)">
+                <g id="Checks" transform="translate(24.000000, 101.000000)">
+                    <g id="Check---Normal-text">
+                        <g id="24/basic-cross-framed">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="icons/24emo-happy" fill="#F9AF2C" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
