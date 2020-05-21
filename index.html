@@ -26,7 +26,7 @@
     <div class="input-selectors">
 
     <div class="select">
-        <label for="textColour">Text colour</label>
+        <label for="textColour">Text colour - <span class="hex" id="textHex">#FFFFFF</span></label>
         <div class="text-selectors">
             <select class="colour-select" id="textColour" onchange="setColour()">
             <option value="0">Pohutukawa</option>
@@ -67,7 +67,7 @@
     </div>
 
     <div class="select bg">
-        <label for="bgColour">Background colour</label>
+        <label for="bgColour">Background colour - <span class="hex" id="backgroundHex">#FFCB4F</span></label>
         <div class="text-selectors">
         <select class="colour-select" id="bgColour" onchange="setColour()">
             <option value="0">Pohutukawa</option>
@@ -113,26 +113,26 @@
     </div>
 </div>   
 
-<div class="container output-stripe-container" id="osc">
+<div class="container output-stripe-container" id="outputStripeContainer">
     <div class="content-container output-stripe">
     <div class="info-container">
 
-    <div id="contrast-ratio-container">
-        <div class="contrast-ratio"><span id="cr">1.51</span> : 1</div>
+    <div id="contrastRatioContainer">
+        <div class="contrast-ratio"><span id="contrastRatioText">1.51</span> : 1</div>
         <div id="checks">
             <div class="rule"></div>
             <div class="contrast-check">
-                <img src="Images/emo-sad.svg" alt="Smiley face" id="check-large">
+                <img src="Images/emo-sad.svg" alt="Smiley face" id="checkLarge">
                 <span class="check-text">Large text</span>
             </div>
             <div class="contrast-check">
-                <img src="Images/emo-sad.svg" alt="Smiley face" id="check-normal">
+                <img src="Images/emo-sad.svg" alt="Smiley face" id="checkNormal">
                 <span class="check-text">Normal text</span>
             </div>
         </div>
     </div>
 
-    <div class="sample-text" id="ls">
+    <div class="sample-text" id="sampleText">
         <p class="large-sample">Lorem ipsum dolor sit amet, consectetur.</p>
         <p class="normal-sample">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>

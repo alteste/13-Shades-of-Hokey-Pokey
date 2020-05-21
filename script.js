@@ -4,7 +4,7 @@
                     
                 var colours = [
 //                    pohutukawa
-                    ['#fff8f8', '#fff1f2', '#ffe7e7', '#ffd5d5', '#ffbcbd', '#fa999b', '#f57f73', '#ef6d6b', '#e95958', '#e34647', '#d93a3f', '#c82630', '#b21c2a', '#9f2023'],
+                    ['#FFF8F8', '#FFF1F2', '#FFE7F7', '#FFD5D5', '#FFBCBD', '#FA999B', '#F57F73', '#EF6D6B', '#E95958', '#E34647', '#D93A3F', '#C82630', '#B21C2A', '#9F2023'],
 //                    jaffa
                     ['#fff8f5', '#fff2ed', '#ffe9e1', '#ffd9ca', '#ffc6b0', '#ffaf8f', '#ff976e', '#ff8455', '#fc723e', '#f3632d', '#e95219', '#d54209', '#c23802', '#a72f00'],
 //                    hokey pokey
@@ -32,18 +32,20 @@
 //                    silver fern
                     ['#fbfbfb', '#f7f7f7', '#e9e9e9', '#dadada', '#c9c9c9', '#b9b9b9', '#a1a1a1', '#888888', '#777777', '#666666', '#555555', '#444444', '#333333', '#222222'],
 //                    glacier
-                    ['#fafbfe', '#f4f6fc', '#e6e9ef', '#d3d8e2', '#bbc4d5', '#a4b1c5', '#8e9eb6', '#7b8ca6', '#6d7e98', '#5f6f88', '#546279', '#48546a', '#3e465c', '#323a4d'],
+                    ['#FAFBFE', '#F4F6FC', '#E6E9EF', '#D3D8E2', '#BBC4D5', '#A4B1C5', '#8E9EB6', '#7B8CA6', '#6D7E98', '#5F6F88', '#546279', '#48546A', '#3E465C', '#323A4D'],
 //                    white
-                    ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+                    ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
                     ];
                     
-                document.getElementById('ls').style.color = colours[document.getElementById("textColour").value][document.getElementById("textLevel").value];
-                
-                document.getElementById('osc').style.backgroundColor = colours[document.getElementById("bgColour").value][document.getElementById("bgLevel").value];
+                document.getElementById('sampleText').style.color = colours[document.getElementById("textColour").value][document.getElementById("textLevel").value];
+                document.getElementById('textHex').innerHTML = colours[document.getElementById("textColour").value][document.getElementById("textLevel").value];
+
+                document.getElementById('outputStripeContainer').style.backgroundColor = colours[document.getElementById("bgColour").value][document.getElementById("bgLevel").value];
+                document.getElementById('backgroundHex').innerHTML = colours[document.getElementById("bgColour").value][document.getElementById("bgLevel").value];
                 
                 disableSelect();
                 
-                contrast(document.getElementById('ls').style.color.substring(4, document.getElementById('ls').style.color.length-1).replace(/ /g, '').split(','), document.getElementById('osc').style.backgroundColor.substring(4, document.getElementById('osc').style.backgroundColor.length-1).replace(/ /g, '').split(','));
+                contrast(document.getElementById('sampleText').style.color.substring(4, document.getElementById('sampleText').style.color.length-1).replace(/ /g, '').split(','), document.getElementById('outputStripeContainer').style.backgroundColor.substring(4, document.getElementById('outputStripeContainer').style.backgroundColor.length-1).replace(/ /g, '').split(','));
                 
                 }
         
@@ -133,27 +135,27 @@
             
             cc = round(cc, 2);
             
-            document.getElementById("cr").innerHTML = cc;
+            document.getElementById("contrastRatioText").innerHTML = cc;
             
             
             if (cc >= 3) {
-                $("#check-large").attr("src", "Images/emo-happy.svg");
+                $("#checkLarge").attr("src", "Images/emo-happy.svg");
             } 
             else {
-                $("#check-large").attr("src", "Images/emo-sad.svg");
-                $("#cr").css('color', '#F3632D');
+                $("#checkLarge").attr("src", "Images/emo-sad.svg");
+                $("#contrastRatioText").css('color', '#F3632D');
             }
             
             if (cc >= 4.5) {
-                $("#check-normal").attr("src", "Images/emo-happy.svg");
-                $("#cr").css('color', '#F9AF2C');
+                $("#checkNormal").attr("src", "Images/emo-happy.svg");
+                $("#contrastRatioText").css('color', '#F9AF2C');
             } 
             else {
-                $("#check-normal").attr("src", "Images/emo-sad.svg");
+                $("#checkNormal").attr("src", "Images/emo-sad.svg");
             }
 
             if ((cc >= 3) && (cc < 4.5)) {
-                $("#cr").css('color', '#00B3C8');
+                $("#contrastRatioText").css('color', '#00B3C8');
             }
         }
         
@@ -186,7 +188,7 @@
         }
         
         $(document).ready(function(){
-            $("#contrast-ratio-container").click(function(){
+            $("#contrastRatioContainer").click(function(){
               if($(this).hasClass('hide')) {
                 $(this).delay(200).animate({height:72},200).removeClass('hide');
                 $("#checks").fadeOut(200);
